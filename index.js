@@ -20,7 +20,7 @@ app.use(todoRouters);
 
 async function start() {
     try {
-        await mongoose.connect("mongodb+srv://amdinfadeev:34tmQ34t233sd@cluster0.jbj6b.mongodb.net/<dbname>?retryWrites=true&w=majority", {
+        await mongoose.connect("mongodb+srv://*:*@cluster0.jbj6b.mongodb.net/<dbname>?retryWrites=true&w=majority", {
             useNewUrlParser: true,
             useFindAndModify: false
         });
@@ -37,13 +37,6 @@ start();
 
 /*
 
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://amdinfadeev:<password>@cluster0.jbj6b.mongodb.net/<dbname>?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
+
 
 */
